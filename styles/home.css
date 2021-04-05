@@ -1,1 +1,6 @@
-/* add home page styles here */
+input {
+    display: none;
+    }
+input:checked + image {
+    border: solid 3px black;
+}

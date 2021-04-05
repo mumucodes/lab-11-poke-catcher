@@ -18,6 +18,9 @@
     - user selects a pokemon and on clicking the Pokeball button it will send the selected Pokemon to the "Pokedex"
         ?How to figure out which Pokemon was selected
         ?How to "capture" the selected Pokemon
+
+        *   this will take place on the app.js page as it will use the functions to manipulate the objects
+
 2.  OnLoad
     -   will need to populate the home.index with three Pokemon
 
@@ -52,9 +55,12 @@
 
 <!-- 1.  Hard code Home index page -->
 <!-- 2.  Hard code Results index page -->
-3.  Create utils.js
+<!-- 3.  Create utils.js -->
 3.  Write local storage functions to utils
-    -   test
+    -   first write the test
+    -   call the function into the test and make sure it passes
+    -   put the function into the utils.js
+    
 4.  Write function generateThree
     -   test
 5.  Write function capturePokemon
