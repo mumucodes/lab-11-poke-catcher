@@ -50,8 +50,8 @@
 
 ## NEXT STEPS
 
-1.  Hard code Home index page
-2.  Hard code Results index page
+<!-- 1.  Hard code Home index page -->
+<!-- 2.  Hard code Results index page -->
 3.  Create utils.js
 3.  Write local storage functions to utils
     -   test
