@@ -1,7 +1,11 @@
 import { setItemState } from '../utils.js';
-import { getItemState } from '../utils.js';
+// import { itemState } from '../utils.js';
+// import { findById } from '../utils.js'
 
-const test = QUnit.test;
+
+
+
+ const test = QUnit.test;
 const DATAKEY = 'DATAKEY';
 
 const fakePokemon = [
@@ -40,9 +44,9 @@ const fakePokemon = [
 
 test('see about local storage', (expect) => {
 
-setItemState(fakePokemon);
-    const localStorage = JSON.parse(localStorage.getItemState(DATAKEY));
+    setItemState(fakePokemon);
+    const storage = JSON.parse(localStorage.getItem(DATAKEY));
 
-    expect.deepEqual(fakePokemon, localStorage);
+    expect.deepEqual(fakePokemon, storage);
 });
 
