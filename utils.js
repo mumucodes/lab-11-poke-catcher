@@ -1,4 +1,5 @@
 const DATAKEY = 'DATAKEY';
+import pokeshop from './pokemon.js';
 
 export function setItemState(parsedData) {
     const stringyData = JSON.stringify(parsedData);
@@ -19,4 +20,7 @@ export function findById(array, id) {
         if (poke.id === id) {
             return poke;
         }
+}
+export function findPoke(name) {
+    return pokeshop.find(item => item.pokemon === name);
 }

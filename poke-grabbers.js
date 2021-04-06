@@ -2,9 +2,13 @@ import { getItemState, setItemState, findById } from './utils.js';
 import pokeShop from './pokemon.js';
 export function capturePokemon(poke) {
 //this should get a pokemon the user selects
-    const currentData = getItemState();
-    const matchingPokeOnData = findById(array, poke.id);
+
+
+const currentData = getItemState();
+    const matchingPokeOnData = findById(currentData, poke.pokemon);
 //this now should record the catch with the matching poke on the pokedex
+
+
     matchingPokeOnData.captured++;
 
     setItemState(currentData);
@@ -13,8 +17,7 @@ export function capturePokemon(poke) {
 }
 
 export function encounterPokemon(poke) {
-//this should allow us to record the number of times any poke appears in the user array
-console.log(poke);    
+//this should allow us to record the number of times any poke appears in the user array  
     const currentData = getItemState();
     const matchingPokeOnData = findById(currentData, poke.pokemon);
 
@@ -49,6 +52,10 @@ export function generateThree() {
     const poke2 = pokeShop[randomNumber2];
     const poke3 = pokeShop[randomNumber3];
 
+    encounterPokemon(poke1);
+    encounterPokemon(poke2);
+    encounterPokemon(poke3);
+    
     return [poke1, poke2, poke3];
 }
 function getRandomIndex() {

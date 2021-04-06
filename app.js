@@ -1,9 +1,9 @@
 // import functions and grab DOM elements
 import { generateThree, capturePokemon } from './poke-grabbers.js';
-import { findById } from './utils.js';
+import { findById, findPoke } from './utils.js';
 
 // initialize state
-const button = document.querySelector('radio-button');
+const button = document.querySelector('#pokemon-catch-button');
 
 let totalCaptures = 0;
 
@@ -42,8 +42,8 @@ button.addEventListener('click', () => {
     totalCaptures++;
     const userRadioSelection = document.querySelector('input:checked');
 
-    const pokeObject = findById(userRadioSelection.value);
-    
+    const pokeObject = findPoke(userRadioSelection.value);
+
     capturePokemon(pokeObject);
 
     if (totalCaptures >= 10) {
