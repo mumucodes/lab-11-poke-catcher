@@ -1,7 +1,8 @@
 import { setItemState } from '../utils.js';
-// import { itemState } from '../utils.js';
+import { getItemState } from '../utils.js';
 import pokeShop from '../pokemon.js';
 import { findById } from '../utils.js';
+import { encounterPokemon } from '../poke-grabbers.js';
 
 
 
@@ -52,7 +53,15 @@ test('see about local storage', (expect) => {
 
 test('see about find id', (expect) => {
 
-    const actual = findById(pokeShop, fakePokemon.id)
+    const actual = findById(pokeShop, fakePokemon.id);
     expect.deepEqual(actual, fakePokemon.id);
+});
+test('encountering pokemon should increment encountered poke and update local storage', (expect) => {
+    //need which are currently displayed and compare the state of all three pokemon to the current state and update them by 1
+    const updatedLocalStorage = encounterPokemon(fakePokemon);
+    const storedPoke = getItemState();
+
+    expect.deepEqual(updatedLocalStorage, storedPoke);
+// expect to see that it won't be equal
 });
 
