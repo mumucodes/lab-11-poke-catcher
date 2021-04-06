@@ -2,7 +2,7 @@ import { setItemState } from '../utils.js';
 import { getItemState } from '../utils.js';
 import pokeShop from '../pokemon.js';
 import { findById } from '../utils.js';
-import { encounterPokemon } from '../poke-grabbers.js';
+import { encounterPokemon, generateThree } from '../poke-grabbers.js';
 
 
 
@@ -44,7 +44,6 @@ const fakePokemon = [
     }];
 
 test('see about local storage', (expect) => {
-
     setItemState(fakePokemon);
     const storage = JSON.parse(localStorage.getItem(DATAKEY));
 
@@ -52,8 +51,8 @@ test('see about local storage', (expect) => {
 });
 
 test('see about find id', (expect) => {
-
     const actual = findById(pokeShop, fakePokemon.id);
+
     expect.deepEqual(actual, fakePokemon.id);
 });
 test('encountering pokemon should increment encountered poke and update local storage', (expect) => {
@@ -63,5 +62,12 @@ test('encountering pokemon should increment encountered poke and update local st
 
     expect.deepEqual(updatedLocalStorage, storedPoke);
 // expect to see that it won't be equal
+});
+test('should generate three unique pokemon', (expect) => {
+    //expect to see three unique pokemon rendered compared to what actually gets rendered
+    //expect first an empty array
+    const actual = generateThree();
+    expect.equal(Array.isArray(actual));
+
 });
 

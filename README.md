@@ -63,11 +63,11 @@
 
 <!-- 4.  Write findById function -->
 
-5.  Write function capturePokemon
+<!-- 5.  Write function capturePokemon -->
         <!-- *   will need find by ID function -->
-6.  Write function for encounterPokemon
+<!-- 6.  Write function for encounterPokemon -->
         <!-- *   will need find by ID function -->
-7.  Write function generateThree
+<!-- 7.  Write function generateThree -->
     -   test
 
 
