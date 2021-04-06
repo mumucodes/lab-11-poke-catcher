@@ -56,21 +56,21 @@
 <!-- 1.  Hard code Home index page -->
 <!-- 2.  Hard code Results index page -->
 <!-- 3.  Create utils.js -->
-3.  Write local storage functions to utils
-    <!-- -   first write the test -->
-    -   call the function into the test and make sure it passes
-    -   put the function into the utils.js
+<!-- 3.  Write local storage functions to utils -->
+        <!-- first write the test 
+        call the function into the test and make sure it passes 
+        put the function into the utils.js -->
 
-4.  Write findById function
+<!-- 4.  Write findById function -->
 
 5.  Write function capturePokemon
-        *   will need find by ID function
+        <!-- *   will need find by ID function -->
 6.  Write function for encounterPokemon
-        *   will need find by ID function
+        <!-- *   will need find by ID function -->
 7.  Write function generateThree
     -   test
 
-    
+
 8.  create ap.js for Home page
 9.  create ap.js for Home page
 

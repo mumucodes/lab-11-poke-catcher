@@ -1,11 +1,11 @@
 import { setItemState } from '../utils.js';
 // import { itemState } from '../utils.js';
-// import { findById } from '../utils.js'
+import pokeShop from '../pokemon.js';
+import { findById } from '../utils.js';
 
 
 
-
- const test = QUnit.test;
+const test = QUnit.test;
 const DATAKEY = 'DATAKEY';
 
 const fakePokemon = [
@@ -48,5 +48,11 @@ test('see about local storage', (expect) => {
     const storage = JSON.parse(localStorage.getItem(DATAKEY));
 
     expect.deepEqual(fakePokemon, storage);
+});
+
+test('see about find id', (expect) => {
+
+    const actual = findById(pokeShop, fakePokemon.id)
+    expect.deepEqual(actual, fakePokemon.id);
 });
 
