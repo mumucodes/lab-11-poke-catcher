@@ -16,7 +16,22 @@ export function capturePokemon(poke) {
 
 export function encounterPokemon(poke) {
 //this should allow us to record the number of times any poke appears in the user array
-    const pokedex = getItemState();
+console.log(poke);    
+    const currentData = getItemState();
+    const matchingPokeOnData = findById(currentData, poke.pokemon);
+
+    if (matchingPokeOnData) {
+        matchingPokeOnData.encountered++;
+    } else {
+        const newPoke = {
+            id: poke.pokemon,
+            captured: 0,
+            encountered: 1
+        };
+        currentData.push(newPoke);
+    }
+    setItemState(currentData);
+    return currentData;
 }
 
 

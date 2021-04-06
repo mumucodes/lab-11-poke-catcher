@@ -58,7 +58,7 @@ test('see about find id', (expect) => {
 });
 test('encountering pokemon should increment encountered poke and update local storage', (expect) => {
     //need which are currently displayed and compare the state of all three pokemon to the current state and update them by 1
-    const updatedLocalStorage = encounterPokemon(fakePokemon);
+    const updatedLocalStorage = encounterPokemon(fakePokemon[0]);
     const storedPoke = getItemState();
 
     expect.deepEqual(updatedLocalStorage, storedPoke);
